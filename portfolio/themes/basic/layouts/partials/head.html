@@ -2,6 +2,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Site.Title }}</title>
+  <title>
+    {{- if .Page.IsHome -}}
+      {{ .Site.Title }}
+    {{- else -}}
+      {{ .Title }} | {{ .Site.Title }}
+    {{- end -}}
+  </title>
+  <meta name="author" content="{{ .Site.Params.Author }}" >
+  <meta name="description" content="
+    {{- with .Page.Description }}
+      {{ . }}
+    {{- else -}}
+      {{ .Site.Params.description }}
+    {{- end -}}
+  " >
   <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
 </head>

@@ -2,3 +2,8 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "</> Daca Code"
 theme = "basic"
+
+[params]
+  author = "David Casas"
+  description = "A blog about programming and technology"
+  

@@ -1,3 +1,11 @@
 {{ define "main" }}
   {{ .Content }}
+
+  <hr>
+  <h3>Las project</h3>
+
+  {{ range first 1 (where .Site.RegularPages "Type" "in" "projects").ByDate.Reverse }}
+    <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+  {{ end }}
+
 {{ end }}
