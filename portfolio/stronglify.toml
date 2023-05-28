@@ -1,0 +1,6 @@
+BaseURl = 'www.star-ship.com'
+LanguageCode = 'en'
+Title = 'Pruebas Collection - Star Ship'
+Theme = 'basic'
+
+[Params]
